@@ -35,7 +35,7 @@ const experiences = [
     role: 'Satış & İhracat Müdürü',
     company: 'Ermad Madencilik San ve Tic. A.Ş.',
     period: 'Ekim 1993 – Temmuz 1996',
-    description: 'İhracat satış departmanının organizasyonu, reklam ve pazarlama desteği. Seramik ve cam endüstrisinin hammaddesi olan Feldspat madeninin kalitesi için teknik destek.',
+    description: 'İhracat satış departmanının organizasyonu, satış ve pazarlama işlemleri. Seramik ve cam endüstrisinin hammaddesi olan Feldspat madeninin kalite müdürlüğü.',
   },
 ];
 
