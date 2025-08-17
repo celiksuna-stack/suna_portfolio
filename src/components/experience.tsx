@@ -5,7 +5,7 @@ const experiences = [
     role: 'Firma Ortağı, Dış Ticaret Danışmanı',
     company: 'Denmer İç ve Dış Tic. LTD ŞTİ',
     period: '2020 - Günümüz',
-    description: 'Dış ticaret alanında danışmanlık hizmetleri sunulmaktadır.',
+    description: 'Dış ticaret alanında;<br/><b>İthalat:</b> Tedarik zincirinden başlayan, yurt dışı malzeme ithalatının gerçekleşmesine kadar süren süreçler.<br/><b>İhracat:</b> Üretimi takiben tüm yurt dışı satış ve operasyon işlemleri kapsamındaki hizmetlerin sunulmasıdır.'
   },
   {
     role: 'Dış Ticaret Müdürü (Emekli)',
@@ -67,7 +67,7 @@ export function Experience() {
                     <p className="text-sm font-semibold text-teal-600 mb-1">{exp.period}</p>
                     <h3 className="text-xl md:text-2xl font-bold font-headline text-gray-800">{exp.role}</h3>
                     <p className="text-md font-semibold text-gray-500 mb-3">{exp.company}</p>
-                    <p className="text-sm md:text-base text-gray-600/80">{exp.description}</p>
+                    <p className="text-sm md:text-base text-gray-600/80" dangerouslySetInnerHTML={{ __html: exp.description }}></p>
                 </div>
             </div>
           ))}
