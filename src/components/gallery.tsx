@@ -19,7 +19,7 @@ export function Gallery() {
             <div className="inline-block rounded-lg bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold">Galerim</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-yellow-900">Benim Dünyam</h2>
             <p className="max-w-[900px] text-yellow-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              İş dünyama, hobilerime ve ilgi alanlarıma bir bakış
+              İş dünyama, hobilerime ve ilgi alanlarıma bir bakış.
             </p>
           </div>
         </div>
