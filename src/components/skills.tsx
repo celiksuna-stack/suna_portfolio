@@ -1,17 +1,18 @@
 import { Badge } from '@/components/ui/badge';
-import { Code, Database, Languages, Handshake, Cog } from 'lucide-react';
+import { Award, Code, Database, Languages, Handshake, Cog } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const skillsData = {
   technical: [
-    { name: 'Windows İşletim Sistemleri', icon: <Cog /> },
-    { name: 'MS Office Araçları', icon: <Cog /> },
-    { name: 'SAP Programı', icon: <Database /> },
-    { name: 'YYS Danışmanı (Yetkilendirilmiş Yükümlü Statüsü)', icon: <Handshake /> }
+    { name: 'Windows İşletim Sistemleri', icon: <Cog className="h-6 w-6 text-primary" /> },
+    { name: 'MS Office Araçları', icon: <Cog className="h-6 w-6 text-primary" /> },
+    { name: 'SAP Programı', icon: <Database className="h-6 w-6 text-primary" /> },
+    { name: 'YYS Danışmanı (Yetkilendirilmiş Yükümlü Statüsü)', icon: <Handshake className="h-6 w-6 text-primary" /> }
   ],
   languages: [
-    { name: 'Türkçe (Anadil)', icon: <Languages /> },
-    { name: 'İngilizce (İleri Düzey)', icon: <Languages /> },
-    { name: 'İtalyanca (Başlangıç Seviyesi)', icon: <Languages /> }
+    { name: 'Türkçe (Anadil)', icon: <Languages className="h-6 w-6 text-primary" /> },
+    { name: 'İngilizce (İleri Düzey)', icon: <Languages className="h-6 w-6 text-primary" /> },
+    { name: 'İtalyanca (Başlangıç Seviyesi)', icon: <Languages className="h-6 w-6 text-primary" /> }
   ]
 };
 
@@ -36,33 +37,45 @@ export function Skills() {
             </p>
           </div>
         </div>
-        <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold font-headline mb-4">Teknik Beceriler</h3>
-            <div className="flex flex-wrap gap-4">
-              {skillsData.technical.map((skill, index) => (
-                <Badge key={index} variant="secondary" className="text-lg py-2 px-4 flex items-center gap-2">
-                   {skill.icon} {skill.name}
-                </Badge>
-              ))}
+        <div className="grid gap-12 mt-12">
+            <div>
+                <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center">Teknik Beceriler ve Diller</h3>
+                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {skillsData.technical.map((skill, index) => (
+                        <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center justify-center p-4">
+                            <CardHeader className="p-2">
+                                {skill.icon}
+                            </CardHeader>
+                            <CardContent className="p-2">
+                                <p className="font-semibold text-lg">{skill.name}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                    {skillsData.languages.map((lang, index) => (
+                         <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center justify-center p-4">
+                            <CardHeader className="p-2">
+                                {lang.icon}
+                            </CardHeader>
+                            <CardContent className="p-2">
+                                <p className="font-semibold text-lg">{lang.name}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
-            <h3 className="text-2xl font-bold font-headline mt-8 mb-4">Dil Yetkinlikleri</h3>
-            <div className="flex flex-wrap gap-4">
-              {skillsData.languages.map((lang, index) => (
-                <Badge key={index} variant="secondary" className="text-lg py-2 px-4 flex items-center gap-2">
-                   {lang.icon} {lang.name}
-                </Badge>
-              ))}
+            <div>
+                <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center">Katıldığı Seminerler</h3>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {seminars.map((seminar, index) => (
+                        <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                           <CardContent className="flex items-center gap-4 p-6">
+                             <Award className="h-8 w-8 text-primary flex-shrink-0" />
+                             <p className="font-medium text-md">{seminar}</p>
+                           </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold font-headline mb-4">Katıldığı Seminerler</h3>
-            <ul className="list-disc list-inside space-y-2">
-              {seminars.map((seminar, index) => (
-                <li key={index} className="text-muted-foreground">{seminar}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
     </section>
