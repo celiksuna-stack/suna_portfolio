@@ -9,7 +9,7 @@ const skillsData = {
     { 
       name: 'Dış Ticaret Teşvikleri', 
       icon: <BookOpenCheck className="h-6 w-6 text-pink-500" />,
-      description: 'Üretim planına ve kapasite raporuna göre Dış Ticaret Teşviklerinin çıkarılması için (D1&D3); Bakanlık nezdinde başvurularının yapılması, alınmasını takiben, projeye bağlı olarak kullanımı ve proje tamamlandığında kapatılması'
+      description: 'Üretim planına ve kapasite raporuna göre Dış Ticaret Teşviklerinin çıkarılması için (D1&D3), Bakanlık nezdinde başvurularının yapılması, alınmasını takiben, projeye bağlı olarak kullanımı ve proje tamamlandığında kapatılması'
     },
     { 
       name: 'İthal hammadde tedariği planlaması', 
