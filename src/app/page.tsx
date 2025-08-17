@@ -1,7 +1,7 @@
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 import { Gallery } from '@/components/gallery';
-import { ProverbGenerator } from '@/components/proverb-generator';
+import { Experience } from '@/components/experience';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 
@@ -12,7 +12,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Gallery />
-        <ProverbGenerator />
+        <Experience />
         <Contact />
       </main>
       <Footer />

@@ -1,26 +1,6 @@
 'use server';
 
 import { z } from 'zod';
-import { generateTurkishProverb } from '@/ai/flows/generate-turkish-proverb';
-
-// Proverb Generation Action
-export async function generateProverbAction(keywords: string): Promise<{ proverb?: string; error?: string; }> {
-  if (!keywords || keywords.trim().length < 3) {
-    return { error: 'Please enter a more descriptive keyword.' };
-  }
-
-  try {
-    const result = await generateTurkishProverb({ keywords });
-    if (result.proverb) {
-      return { proverb: result.proverb };
-    }
-    return { error: 'Could not generate a proverb. Please try a different keyword.' };
-  } catch (error) {
-    console.error('Proverb generation error:', error);
-    return { error: 'An unexpected error occurred while generating the proverb.' };
-  }
-}
-
 
 // Contact Form Action
 const contactFormSchema = z.object({

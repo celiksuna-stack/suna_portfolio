@@ -15,8 +15,8 @@ export function Header() {
         <Link href="#gallery" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
           Gallery
         </Link>
-        <Link href="#proverbs" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-          Proverbs
+        <Link href="#experience" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          Experience
         </Link>
         <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
           Contact
