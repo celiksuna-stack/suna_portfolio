@@ -64,7 +64,7 @@ export function Skills() {
                 </div>
             </div>
             <div>
-                <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center text-gray-800">Katıldığı Seminerler</h3>
+                <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center text-gray-800">Katıldığım Seminerler</h3>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {seminars.map((seminar, index) => (
                         <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
