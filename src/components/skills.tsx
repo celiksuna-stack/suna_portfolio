@@ -1,16 +1,33 @@
-import { Badge } from '@/components/ui/badge';
-import { Award, Code, Database, Languages, Handshake, Cog } from 'lucide-react';
+'use client';
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Award, Code, Database, Languages, Handshake, Cog, BookOpenCheck, PackageSearch } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const skillsData = {
   technical: [
-    { name: 'Windows İşletim Sistemleri', icon: <Cog className="h-6 w-6 text-pink-500" /> },
-    { name: 'MS Office Araçları', icon: <Cog className="h-6 w-6 text-pink-500" /> },
-    { name: 'SAP Programı', icon: <Database className="h-6 w-6 text-pink-500" /> },
-    { name: 'YYS Danışmanı (Yetkilendirilmiş Yükümlü Statüsü)', icon: <Handshake className="h-6 w-6 text-pink-500" /> }
+    { 
+      name: 'Dış Ticaret Teşvikleri', 
+      icon: <BookOpenCheck className="h-6 w-6 text-pink-500" />,
+      description: 'Üretim planına ve kapasite raporuna göre Dış Ticaret Teşviklerinin çıkarılması için (D1&D3); Bakanlık nezdinde başvurularının yapılması, alınmasını takiben, projeye bağlı olarak kullanımı ve proje tamamlandığında kapatılması'
+    },
+    { 
+      name: 'İthal hammadde tedariği planlaması', 
+      icon: <PackageSearch className="h-6 w-6 text-pink-500" />,
+      description: 'Yerli hammadde alternatif ithal malzeme tedariği için dış ticaret maliyet çalışmalarının yapılması ve optimum maliyet içeren hammaddelerin tespiti'
+    },
+    { 
+      name: 'YYS Danışmanı (Yetkilendirilmiş Yükümlü Statüsü)', 
+      icon: <Handshake className="h-6 w-6 text-pink-500" />,
+      description: 'Uluslar arası pasaport niteliğindeki YYS/AEO belgesinin alımı için tüm fabrika genelinde proje liderliği görevinin ve gerekliliklerinin yerine getirilmesi'
+    },
+    { 
+      name: 'SAP Programı', 
+      icon: <Database className="h-6 w-6 text-pink-500" />,
+      description: 'SAP kurulumu aşamasında MM /SS ve PP modülleri üzerinde oluşum projelerinin yürütülmesi'
+    }
   ],
   languages: [
-    { name: 'Türkçe (Anadil)', icon: <Languages className="h-6 w-6 text-pink-500" /> },
     { name: 'İngilizce (İleri Düzey)', icon: <Languages className="h-6 w-6 text-pink-500" /> },
     { name: 'İtalyanca (Başlangıç Seviyesi)', icon: <Languages className="h-6 w-6 text-pink-500" /> }
   ]
@@ -37,22 +54,27 @@ export function Skills() {
             </p>
           </div>
         </div>
-        <div className="grid gap-12 mt-12">
+        <div className="grid gap-12 mt-12 md:grid-cols-2">
             <div>
                 <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center text-gray-800">Teknik Beceriler ve Diller</h3>
-                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {skillsData.technical.map((skill, index) => (
-                        <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center justify-center p-4">
-                            <CardHeader className="p-2">
-                                {skill.icon}
-                            </CardHeader>
-                            <CardContent className="p-2">
-                                <p className="font-semibold text-lg text-gray-700">{skill.name}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
+                <Accordion type="single" collapsible className="w-full">
+                  {skillsData.technical.map((skill, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                      <AccordionTrigger className="font-semibold text-lg hover:no-underline">
+                        <div className="flex items-center gap-4">
+                          {skill.icon}
+                          {skill.name}
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-base text-gray-600 pl-10">
+                        {skill.description}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
                     {skillsData.languages.map((lang, index) => (
-                         <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center justify-center p-4">
+                         <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col items-center justify-center p-4 bg-white">
                             <CardHeader className="p-2">
                                 {lang.icon}
                             </CardHeader>
@@ -65,9 +87,9 @@ export function Skills() {
             </div>
             <div>
                 <h3 className="text-2xl md:text-3xl font-bold font-headline mb-6 text-center text-gray-800">Katıldığım Seminerler</h3>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 sm:grid-cols-1">
                     {seminars.map((seminar, index) => (
-                        <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
                            <CardContent className="flex items-center gap-4 p-6">
                              <Award className="h-8 w-8 text-pink-500 flex-shrink-0" />
                              <p className="font-medium text-md text-gray-700">{seminar}</p>
