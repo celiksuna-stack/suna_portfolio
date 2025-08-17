@@ -52,26 +52,23 @@ export function Experience() {
             </p>
           </div>
         </div>
-        <div className="relative mt-12">
+        <div className="relative mt-12 max-w-3xl mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/20"></div>
+          <div className="absolute left-6 md:left-8 top-0 w-0.5 h-full bg-primary/30" />
           
           {experiences.map((exp, index) => (
-            <div key={index} className="relative mb-8 flex justify-start md:justify-center items-start w-full">
-              <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg">
-                <Briefcase className="text-primary-foreground" />
-              </div>
-              <div className="w-full pl-20 md:w-1/2 md:pl-8 md:pr-8 md:text-right">
-                <div className={`p-4 bg-card rounded-lg shadow-lg ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                  <p className="font-bold text-primary">{exp.period}</p>
-                  <h3 className="text-xl font-bold font-headline mt-1">{exp.role}</h3>
-                  <p className="text-muted-foreground mb-2">{exp.company}</p>
-                  <p className="text-sm">{exp.description}</p>
+            <div key={index} className="relative pl-16 md:pl-20 mb-12">
+                {/* Icon */}
+                 <div className="absolute left-0 top-1.5 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full shadow-lg">
+                    <Briefcase className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
                 </div>
-              </div>
-              <div className={`hidden md:block w-1/2 pl-8 ${index % 2 !== 0 ? '' : 'hidden'}`}>
-                {/* This div is for spacing on desktop */}
-              </div>
+                {/* Card */}
+                <div className="bg-card rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 border-l-4 border-primary">
+                    <p className="text-sm font-semibold text-primary mb-1">{exp.period}</p>
+                    <h3 className="text-xl md:text-2xl font-bold font-headline text-card-foreground">{exp.role}</h3>
+                    <p className="text-md font-semibold text-muted-foreground mb-3">{exp.company}</p>
+                    <p className="text-sm md:text-base text-muted-foreground/80">{exp.description}</p>
+                </div>
             </div>
           ))}
         </div>
