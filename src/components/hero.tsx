@@ -22,7 +22,7 @@ export function Hero() {
                 <p className="text-xl md:text-2xl text-purple-600 font-semibold">Dış Ticaret Danışmanı & Kimya Mühendisi</p>
               </div>
               <p className="max-w-[600px] text-gray-600 md:text-xl text-center lg:text-left">
-                Mühendislik ve yöneticilik derecelerimi kullanarak, 25 yıllık "Satış, Satın Alma / Tedarik & Lojistik, İhracat - İthalat operasyonları, Gümrüklü Antrepo" Yönetimi pozisyonlarındaki deneyimlerimi daha da ileriye taşıyacak zorlu bir kariyer hedefliyorum.
+                Mühendislik ve yöneticilik derecelerimi kullanarak, 25 yıllık "Satış, Satın Alma / Tedarik & Lojistik, İhracat - İthalat operasyonları, Gümrüklü Antrepo" Yönetimi pozisyonlarındaki deneyimlerimi danışmanlık yapacağım firmalar ile paylaşmak, tüm dış ticaret konularını kapsayan bir hizmet vermek ve firmanın kalıcı dış ticaret alt yapısını oluşturacak yeni projelere imza atmayı hedefliyorum.
               </p>
             </div>
           </div>
