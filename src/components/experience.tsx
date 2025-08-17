@@ -53,19 +53,39 @@ export function Experience() {
           </div>
         </div>
         <div className="relative mt-12">
-          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/20"></div>
+          {/* Vertical line for desktop */}
+          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/20 hidden md:block"></div>
+          {/* Vertical line for mobile */}
+          <div className="absolute left-6 w-0.5 h-full bg-primary/20 md:hidden"></div>
+
           {experiences.map((exp, index) => (
-            <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-              <div className="w-5/12"></div>
-              <div className="z-10 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg">
-                <Briefcase className="text-primary-foreground" />
-              </div>
-              <div className={`w-5/12 px-4 py-6 bg-card rounded-lg shadow-lg ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
-                <p className="font-bold text-primary">{exp.period}</p>
-                <h3 className="text-xl font-bold font-headline mt-1">{exp.role}</h3>
-                <p className="text-muted-foreground mb-2">{exp.company}</p>
-                <p className="text-sm">{exp.description}</p>
-              </div>
+            <div key={index} className="mb-8 flex md:justify-between items-start w-full md:flex-row-reverse -ml-2 md:ml-0">
+               {/* Mobile view */}
+               <div className="flex-shrink-0 md:hidden z-10">
+                 <div className="z-10 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg ml-0">
+                    <Briefcase className="text-primary-foreground" />
+                 </div>
+               </div>
+               <div className="w-full md:w-5/12 ml-6 md:ml-0">
+                  <div className={`px-4 py-6 bg-card rounded-lg shadow-lg md:text-right`}>
+                    <p className="font-bold text-primary">{exp.period}</p>
+                    <h3 className="text-xl font-bold font-headline mt-1">{exp.role}</h3>
+                    <p className="text-muted-foreground mb-2">{exp.company}</p>
+                    <p className="text-sm">{exp.description}</p>
+                  </div>
+               </div>
+               
+               {/* Desktop view */}
+                <div className="hidden md:block w-5/12"></div>
+                <div className="hidden md:flex z-10 items-center justify-center w-12 h-12 bg-primary rounded-full shadow-lg">
+                    <Briefcase className="text-primary-foreground" />
+                </div>
+               <div className={`hidden md:block w-5/12 px-4 py-6 bg-card rounded-lg shadow-lg text-left`}>
+                    <p className="font-bold text-primary">{exp.period}</p>
+                    <h3 className="text-xl font-bold font-headline mt-1">{exp.role}</h3>
+                    <p className="text-muted-foreground mb-2">{exp.company}</p>
+                    <p className="text-sm">{exp.description}</p>
+                </div>
             </div>
           ))}
         </div>

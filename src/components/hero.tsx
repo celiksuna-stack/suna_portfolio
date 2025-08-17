@@ -10,7 +10,7 @@ export function Hero() {
             alt="Suna Çelik"
             width={600}
             height={600}
-            className="mx-auto aspect-square overflow-hidden rounded-full object-cover sm:w-full"
+            className="mx-auto aspect-square overflow-hidden rounded-full object-cover w-[250px] h-[250px] sm:w-full sm:h-auto"
             data-ai-hint="portrait woman"
           />
           <div className="flex flex-col justify-center space-y-4">
