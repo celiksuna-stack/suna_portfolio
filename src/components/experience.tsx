@@ -2,22 +2,40 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Tech Solutions Inc.',
-    period: '2020 - Present',
-    description: 'Leading the development of scalable web applications using React and Node.js. Mentoring junior developers and improving code quality across the team.',
+    role: 'Firma Ortağı, Dış Ticaret Danışmanı',
+    company: 'Denmer İç ve Dış Tic. LTD ŞTİ',
+    period: '2020 - Günümüz',
+    description: 'Dış ticaret alanında danışmanlık hizmetleri sunulmaktadır.',
   },
   {
-    role: 'Software Engineer',
-    company: 'Innovate Co.',
-    period: '2018 - 2020',
-    description: 'Developed and maintained features for a large-scale e-commerce platform. Worked on both front-end and back-end systems.',
+    role: 'Dış Ticaret Müdürü (Emekli)',
+    company: 'BMC Otomotiv Sanayi ve Ticaret A.Ş.',
+    period: 'Eylül 2015 – Nisan 2019',
+    description: 'Satın Alma / Tedarik Malzeme Lojistiği & İhracat-İthalat operasyonları yönetimi. Yurt dışı tedarikçilerle koordinasyon, kritik malzeme takibi, lojistik operasyonları, ödeme planlaması ve finansal raporlama gibi sorumluluklar üstlenildi.',
   },
   {
-    role: 'Junior Developer',
-    company: 'CodeCrafters',
-    period: '2016 - 2018',
-    description: 'Assisted in the development of client websites using HTML, CSS, and JavaScript. Gained foundational skills in a fast-paced agency environment.',
+    role: 'Dış Ticaret Müdür Yardımcısı',
+    company: 'BMC Sanayi ve Ticaret A.Ş.',
+    period: 'Nisan 2007 - Eylül 2015',
+    description: 'Satın Alma / Tedarik Malzeme Lojistiği & İhracat-İthalat operasyonlarında yönetici yardımcılığı.',
+  },
+  {
+    role: 'Takım Lideri, İhracat & İthalat Operasyonları & Gümrüklü Antrepo',
+    company: 'BMC Sanayi ve Ticaret A.Ş.',
+    period: 'Ağustos 1997 – Nisan 2007',
+    description: 'İhracat, ithalat ve gümrüklü antrepo operasyonlarından sorumlu takım liderliği.',
+  },
+  {
+    role: 'İhracat Sorumlusu',
+    company: 'BMC Sanayi ve Ticaret A.Ş.',
+    period: 'Temmuz 1996 – Ağustos 1997',
+    description: 'İhracat ve ithalat departmanında ihracat operasyonları sorumluluğu.',
+  },
+  {
+    role: 'Satış & İhracat Müdürü',
+    company: 'Ermad Madencilik San ve Tic. A.Ş.',
+    period: 'Ekim 1993 – Temmuz 1996',
+    description: 'İhracat satış departmanının organizasyonu, reklam ve pazarlama desteği. Seramik ve cam endüstrisinin hammaddesi olan Feldspat madeninin kalitesi için teknik destek.',
   },
 ];
 
@@ -27,10 +45,10 @@ export function Experience() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm text-foreground">Professional Journey</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent-foreground">Work Experience</h2>
+            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm text-foreground">Profesyonel Yolculuk</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent-foreground">İş Deneyimi</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A timeline of my career, highlighting key roles and accomplishments.
+              Kariyerim boyunca üstlendiğim kilit rolleri ve başarıları gösteren zaman çizelgesi.
             </p>
           </div>
         </div>

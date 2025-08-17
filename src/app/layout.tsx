@@ -3,8 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Suna's Portfolio",
-  description: "Welcome to the personal portfolio of Suna, showcasing projects, experiences, and interests.",
+  title: "Suna Çelik'in Portfolyosu",
+  description: "Suna Çelik'in proje, deneyim ve ilgi alanlarını sergileyen kişisel portfolyosuna hoş geldiniz.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="tr" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
