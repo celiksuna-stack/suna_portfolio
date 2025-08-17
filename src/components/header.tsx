@@ -22,7 +22,7 @@ function NavLinks() {
     return (
         <>
             {navLinks.map(link => (
-                 <Link key={link.href} href={link.href} className="text-sm font-medium hover:underline underline-offset-4 flex items-center gap-1" prefetch={false}>
+                 <Link key={link.href} href={link.href} className="text-sm font-medium hover:underline underline-offset-4 flex items-center gap-1 text-gray-600 hover:text-gray-900" prefetch={false}>
                     {link.icon} {link.label}
                 </Link>
             ))}
@@ -63,9 +63,9 @@ export function Header() {
     const isMobile = useIsMobile();
   
     return (
-    <header className="px-4 lg:px-6 h-16 flex items-center bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
+    <header className="px-4 lg:px-6 h-16 flex items-center bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b">
         <Link href="#" className="flex items-center justify-center mr-auto" prefetch={false}>
-            <User className="h-6 w-6 text-primary" />
+            <User className="h-6 w-6 text-purple-600" />
             <span className="sr-only">Suna Çelik'in Portfolyosu</span>
         </Link>
         {isMobile === undefined ? null : isMobile ? (

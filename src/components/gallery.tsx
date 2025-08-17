@@ -12,13 +12,14 @@ export function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-yellow-50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Gallery</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A glimpse into my world, interests, and travels.
+            <div className="inline-block rounded-lg bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold">Galeri</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-yellow-900">Benim Dünyam</h2>
+            <p className="max-w-[900px] text-yellow-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              İlgi alanlarıma, seyahatlerime ve dünyama bir bakış.
             </p>
           </div>
         </div>
