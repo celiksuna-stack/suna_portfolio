@@ -65,10 +65,10 @@ export function Skills() {
                 <Accordion type="single" collapsible className="w-full">
                   {skillsData.technical.map((skill, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="font-semibold text-lg hover:no-underline">
-                        <div className="flex items-center gap-4">
-                          {skill.icon}
-                          {skill.name}
+                      <AccordionTrigger className="font-semibold text-lg hover:no-underline text-left">
+                        <div className="flex items-start gap-4">
+                          <span className="flex-shrink-0">{skill.icon}</span>
+                          <span className="flex-1">{skill.name}</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="text-base text-gray-600 pl-10">
