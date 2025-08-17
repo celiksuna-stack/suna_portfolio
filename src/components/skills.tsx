@@ -1,7 +1,7 @@
 'use client';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Award, Code, Database, Languages, Handshake, Cog, BookOpenCheck, PackageSearch } from 'lucide-react';
+import { Award, Database, Languages, Handshake, Cog, BookOpenCheck, PackageSearch } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const skillsData = {
@@ -25,6 +25,11 @@ const skillsData = {
       name: 'SAP Programı', 
       icon: <Database className="h-6 w-6 text-pink-500" />,
       description: 'SAP kurulumu aşamasında MM /SS ve PP modülleri üzerinde oluşum projelerinin yürütülmesi'
+    },
+    {
+      name: 'İhracat pazar araştırmaları',
+      icon: <Cog className="h-6 w-6 text-pink-500" />,
+      description: 'Ürünlerin yurt dışı müşteri taleplerini değerlendirerek yeni müşteriler kazandırmak ve ihracat işlemlerini gerçekleştirmek'
     }
   ],
   languages: [
