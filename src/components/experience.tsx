@@ -5,7 +5,15 @@ const experiences = [
     role: 'Firma Ortağı, Dış Ticaret Danışmanı',
     company: 'Denmer İç ve Dış Tic. LTD ŞTİ',
     period: '2020 - Günümüz',
-    description: 'Dış ticaret alanında;<br/><b>İthalat:</b> Tedarik zincirinden başlayan, yurt dışı malzeme ithalatının gerçekleşmesine kadar süren süreçler.<br/><b>İhracat:</b> Üretimi takiben tüm yurt dışı satış ve operasyon işlemleri kapsamındaki hizmetlerin sunulmasıdır.'
+    description:
+      'Dış ticaret alanında;<br/><b>İthalat:</b> Tedarik zincirinden başlayan, yurt dışı malzeme ithalatının gerçekleşmesine kadar süren süreçler.<br/><b>İhracat:</b> Üretimi takiben tüm yurt dışı satış ve operasyon işlemleri kapsamındaki hizmetlerin sunulmasıdır.',
+  },
+  {
+    role: 'A Sınıfı İş Güvenliği Uzmanı',
+    company: 'İzmir OSGB Ticaret LTD ŞTİ',
+    period: '2014 - Günümüz',
+    description:
+      '6331 sayılı iş sağlığı ve güvenliği mevzuatının gerekliliklerinin yerine getirilmesi. Risk analizi, acil durum eylem planları, saha denetimi yapılması, İSG kurul yönetimi gibi sorumluluklar üstlenildi.',
   },
   {
     role: 'Dış Ticaret Müdürü (Emekli)',
@@ -42,7 +50,7 @@ const experiences = [
 export function Experience() {
   return (
     <section id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-teal-50">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-teal-100 text-teal-800 px-3 py-1 text-sm font-semibold">Profesyonel Yolculuk</div>

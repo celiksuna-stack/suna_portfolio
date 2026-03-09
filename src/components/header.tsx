@@ -63,18 +63,22 @@ export function Header() {
     const isMobile = useIsMobile();
   
     return (
-    <header className="px-4 lg:px-6 h-16 flex items-center bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b">
-        <Link href="#" className="flex items-center justify-center mr-auto" prefetch={false}>
+    <header className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b">
+      <div className="h-16 flex items-center w-full max-w-6xl mx-auto px-4 lg:px-6">
+        <Link href="#" className="flex items-center justify-center" prefetch={false}>
             <User className="h-6 w-6 text-purple-600" />
             <span className="sr-only">Suna Çelik'in Portfolyosu</span>
         </Link>
-        {isMobile === undefined ? null : isMobile ? (
-          <MobileNav />
-        ) : (
-          <nav className="hidden md:flex gap-4 sm:gap-6">
-            <NavLinks />
-          </nav>
-        )}
+        <div className="ml-auto">
+          {isMobile === undefined ? null : isMobile ? (
+            <MobileNav />
+          ) : (
+            <nav className="hidden md:flex gap-4 sm:gap-6">
+              <NavLinks />
+            </nav>
+          )}
+        </div>
+      </div>
     </header>
   );
 }

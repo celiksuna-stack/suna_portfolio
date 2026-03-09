@@ -49,7 +49,7 @@ const seminars = [
 export function Skills() {
   return (
     <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-pink-50">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-pink-100 text-pink-800 px-3 py-1 text-sm font-semibold">Yetenek & Uzmanlık</div>

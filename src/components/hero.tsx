@@ -3,10 +3,10 @@ import Image from 'next/image';
 export function Hero() {
   return (
     <section id="biography" className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-purple-50">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center justify-center">
           <Image
-            src="https://placehold.co/600x600.png"
+            src="/images/hero/portfolio-01.jpg"
             alt="Suna Çelik"
             width={600}
             height={600}
@@ -21,8 +21,8 @@ export function Hero() {
                 </h1>
                 <p className="text-xl md:text-2xl text-purple-600 font-semibold">Dış Ticaret Danışmanı & Kimya Mühendisi</p>
               </div>
-              <p className="max-w-[600px] text-gray-600 md:text-xl text-center lg:text-left">
-                Mühendislik ve yöneticilik tecrübelerimi kullanarak, 25 yıllık "Yurt Dışı Satış, Satın Alma / Tedarik & Lojistik, İhracat - İthalat operasyonları, Gümrüklü Antrepo Yönetimi" pozisyonlarındaki deneyimlerimi danışmanlık yapacağım firmalar ile paylaşmak, tüm dış ticaret konularını kapsayan bir hizmet vermek ve firmanın kalıcı dış ticaret alt yapısını oluşturacak yeni projelere imza atmayı hedefliyorum.
+              <p className="max-w-[600px] text-gray-600 md:text-xl text-center lg:text-left mx-auto lg:mx-0">
+                Mühendislik ve yöneticilik tecrübelerimi kullanarak, 25 yıllık "Yurt Dışı Satış, Satın Alma / Tedarik & Lojistik, İhracat - İthalat operasyonları, Gümrüklü Antrepo Yönetimi" pozisyonlarındaki deneyimlerimi danışmanlık yapacağım firmalar ile paylaşmak, tüm dış ticaret konularını kapsayan bir hizmet vermek ve firmanın kalıcı dış ticaret alt yapısını oluşturacak yeni projelere imza atmayı hedefliyorum.
               </p>
             </div>
           </div>
