@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // Use plain <img> tags so images work on static export / GitHub Pages
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
