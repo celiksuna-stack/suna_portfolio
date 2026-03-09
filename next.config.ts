@@ -1,13 +1,10 @@
 import type { NextConfig } from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
   // Enable static export so the site can be hosted on GitHub Pages
   output: 'export',
-  // Make paths work when the site is served from /suna_portfolio on GitHub Pages
-  basePath: isProd ? '/suna_portfolio' : '',
-  assetPrefix: isProd ? '/suna_portfolio/' : '',
+  // We serve the site at the root of the custom domain (www.sunadenmer.com.tr),
+  // so no basePath/assetPrefix are needed. Trailing slash keeps static export happy.
   trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
